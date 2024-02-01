@@ -5,7 +5,7 @@ namespace WpfAppS6DZCalc
 {
     class CalculatorExceptions : CalculatorAriphmetics
     {
-        public override void Add(string value)
+        public override void Add(double value)
         {
             try
             {
@@ -18,7 +18,7 @@ namespace WpfAppS6DZCalc
             }
 
         }
-        public override void Div(string value)
+        public override void Div(double value)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace WpfAppS6DZCalc
             }
 
         }
-        public override void Sub(string value)
+        public override void Sub(double value)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace WpfAppS6DZCalc
             }
 
         }
-        public override void Mult(string value)
+        public override void Mult(double value)
         {
             try
             {

@@ -22,58 +22,46 @@ namespace WpfAppS6DZCalc
         {
             Result.Invoke(this, new CalculatorArgs { answer = result });
         }
-        public virtual void Add(string value)
+        public virtual void Add(double value)
         {
             results.Push(result);
             if(double.TryParse(result, out double vD1))
             {
-                if (double.TryParse(value, out double vD2))
-                {
-                    result = (vD1 + vD2).ToString();
-                }
+                    result = (vD1 + value).ToString();
             }
             Calculation();
         }
 
-        public virtual void Sub(string value)
+        public virtual void Sub(double value)
         {
             results.Push(result);
             if (double.TryParse(result, out double vD1))
             {
-                if (double.TryParse(value, out double vD2))
-                {
-                    result = (vD1 - vD2).ToString();
-                }
+                    result = (vD1 - value).ToString();
             }
             Calculation();
         }
 
-        public virtual void Mult(string value) 
+        public virtual void Mult(double value) 
         {
             results.Push(result);
             if (double.TryParse(result, out double vD1))
             {
-                if (double.TryParse(value, out double vD2))
-                {
-                    result = (vD1 * vD2).ToString();
-                }
+                    result = (vD1 * value).ToString();
             }
             Calculation();
         }
 
-        public virtual void Div(string value)
+        public virtual void Div(double value)
         {
-            if(value == "0")
+            if(value == 0)
             {
                 throw new DivideByZeroException();
             }
             results.Push(result);
             if (double.TryParse(result, out double vD1))
             {
-                if (double.TryParse(value, out double vD2))
-                {
-                    result = (vD1 / vD2).ToString();
-                }
+                    result = (vD1 / value).ToString();
             }
             Calculation();
         }

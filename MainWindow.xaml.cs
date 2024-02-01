@@ -26,7 +26,7 @@ namespace WpfAppS6DZCalc
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bool parse = double.TryParse(TextBoxInputText.Text, out double v);
+            bool parse = double.TryParse(TextBoxInputText.Text, out double value);
             string name = (e.Source as FrameworkElement).Name;
             if (!parse)
             {
@@ -36,13 +36,13 @@ namespace WpfAppS6DZCalc
             switch (name)
             {
                 case "ButtonAdd":
-                    calculator.Add(TextBoxInputText.Text); break;
+                    calculator.Add(value); break;
                 case "ButtonSub":
-                    calculator.Sub(TextBoxInputText.Text); break;
+                    calculator.Sub(value); break;
                 case "ButtonMult":
-                    calculator.Mult(TextBoxInputText.Text); break;
+                    calculator.Mult(value); break;
                 case "ButtonDiv":
-                    calculator.Div(TextBoxInputText.Text); break;
+                    calculator.Div(value); break;
                 case "ButtonCancel":
                     calculator.Cancel(); break;
                 case "ButtonClear":
